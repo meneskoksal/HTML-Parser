@@ -5,7 +5,7 @@ currencies=[]
 url_2 = 'https://tr.wikipedia.org/wiki/En_çok_kullanılan_para_birimleri_listesi'
 sayfa_2 = requests.get(url_2)
 html_sayfa_2 = BeautifulSoup(sayfa_2.content, "html.parser")
-# wikitable sortable jquery-tablesorter
+
 table = html_sayfa_2.find('table', class_="wikitable")
 table_body = table.find('tbody')
 
